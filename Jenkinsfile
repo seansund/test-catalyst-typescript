@@ -12,7 +12,7 @@
 
 
 def buildAgentName(String jobName, String buildNumber) {
-    if (jobName.length > 23) {
+    if (jobName.length() > 23) {
         jobName = jobName.substring(0, 23);
     }
 
