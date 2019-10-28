@@ -16,7 +16,7 @@ def buildAgentName(String jobName, String buildNumber) {
         jobName = jobName.substring(0, 23);
     }
 
-    String agentName = "agent.${jobName}.${buildNumber}".replace('-', '_').replace('/', '_');
+    String agentName = "agent.${jobName}.${buildNumber}".replace('-', '_').replace('/', '_').replace('_.', '.');
 
     System.out.println("Agent name: ${agentName}")
     return agentName;
