@@ -10,7 +10,7 @@
  * to run in both Kubernetes and OpenShift environments.
  */
 
-def buildLabel = "agent.${env.JOB_NAME.substring(0, 23)}.${env.BUILD_NUMBER}".replace('-', '_').replace('/', '_')
+def buildLabel = "agent.${env.JOB_NAME.substring(0, 22)}.${env.BUILD_NUMBER}".replace('-', '_').replace('/', '_')
 def cloudName = env.CLOUD_NAME == "openshift" ? "openshift" : "kubernetes"
 def workingDir = env.CLOUD_NAME == "openshift" ? "/home/jenkins" : "/home/jenkins/agent"
 podTemplate(
